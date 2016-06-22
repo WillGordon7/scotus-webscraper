@@ -16,6 +16,7 @@ docketNumbersNotAccessed = open("test-cases-not-accessed.txt", "w")
 
 TAG_RE = re.compile(r'<[^>]+>')
 
+#code taken from Stack Overflow: http://stackoverflow.com/questions/9662346/python-code-to-remove-html-tags-from-a-string
 def remove_tags(text):
     return TAG_RE.sub('', text)
 
@@ -51,7 +52,7 @@ with open('testFileCourtCases.csv') as csvfile:
 		    url += docketNumber
 		    url += '.html'
 		    ifStatementAccessed = True
-		    print "I'm here"
+		    #print "I'm here"
 		    if file_exists(url) != True:
 		    	num = num+1
 		    	print docketNumber
